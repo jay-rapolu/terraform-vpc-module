@@ -6,10 +6,8 @@ data "aws_vpc" "default" {
   default = true
 }
 
-
-
 output "vpc_id" {
-  value = data.aws_vpc.default.id
+  value = aws_vpc.main.id
 }
 
 output "route_table" {
