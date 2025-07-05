@@ -7,6 +7,10 @@ resource "aws_vpc_peering_connection" "main" {
 		allow_remote_vpc_dns_resolution = true
 	}
 
+	requester {
+		allow_remote_vpc_dns_resolution = true
+	}
+
   tags = merge(
 		local.common_variables,
 		{
