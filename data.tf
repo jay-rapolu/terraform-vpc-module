@@ -11,15 +11,15 @@ output "vpc_id" {
 }
 
 output "public_subnets" {
-  value = aws_subnet.public.id
+  value = aws_subnet.public[*].id
 }
 
 output "private_subnets" {
-  value = aws_subnet.private.id
+  value = aws_subnet.private[*].id
 }
 
 output "database_subnets" {
-  value = aws_subnet.database.id
+  value = aws_subnet.database[*].id
 }
 
 output "route_table" {
